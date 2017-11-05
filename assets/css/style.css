@@ -365,11 +365,11 @@ nav ul li:first-child {
 
 .section {
   min-height: 100vh;
-  padding: calc(2em + 2px) 0 0 0;
+  padding: calc(2em + 1px) 0 0 0;
 }
 
 #top {
-  padding: calc(4em + 2px) 0 0 0;
+  padding: calc(4em + 1px) 0 0 0;
 }
 
 .section hr {
