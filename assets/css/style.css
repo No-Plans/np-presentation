@@ -111,13 +111,21 @@ a.site-link:hover {
   display: inline-block;
   /*cursor: pointer;*/
   background: none;
-  padding: 1rem 2.5rem 0.8rem 1.25rem;
+  padding: 1rem 1rem 0.8rem 1.25rem;
   border-radius: 4px;
   border: 1px solid black;
   font-size: 0.8rem;
   line-height: 1.5em;
   margin-bottom: 1.5em;
+}
 
+.site-link:after {
+  content: '▶';
+  font-size: 0.35rem;
+  padding-left: 1.1rem;
+  padding-bottom: 1em;
+  display: inline-block;
+  transform: translateY(-7%);
 }
 
 .site-link:hover,
