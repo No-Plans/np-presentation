@@ -368,6 +368,10 @@ nav ul li:first-child {
   padding: calc(2em + 2px) 0 0 0;
 }
 
+#top {
+  padding: calc(4em + 2px) 0 0 0;
+}
+
 .section hr {
   border: 0;
   border-top: 1px solid black;
