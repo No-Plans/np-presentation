@@ -1,0 +1,19 @@
+title: Archive
+
+files: false
+
+pages:
+  template: project
+
+options: 
+  template: false  
+  status: true  
+  url: true
+  delete: true
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+

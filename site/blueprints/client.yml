@@ -1,0 +1,71 @@
+title: Client
+
+files:
+  sortable: true
+  fields:
+    caption:
+        label: Caption
+        type: text
+
+pages:
+  template: project
+
+fields:
+  title:
+    label: Title
+    type:  text
+    width: 3/4
+
+  time:
+    label: Time
+    type:  text
+    width: 1/4
+
+  description:
+    label: Description
+    type:  textarea
+
+  side:
+    label: Side
+    type: select
+    default: left
+    options:
+      left: left
+      right: right
+    width: 1/4
+
+  size:
+    label: Size
+    type: select
+    default: medium
+    options:
+      small: small
+      medium: medium
+      medium_large: medium_large
+      large: large
+      full: full
+    width: 1/4
+
+  vertical_position:
+    label: Vertical Position
+    type: select
+    default: vertical_center
+    options:
+      vertical_uppest: uppest
+      vertical_up: up
+      vertical_center: center
+      vertical_down: down
+      vertical_downest: downest
+    width: 1/4
+
+  horizontal_position:
+    label: Horizontal Position
+    type: select
+    default: horizontal_center
+    options:
+      horizontal_leftest: leftest
+      horizontal_left: left
+      horizontal_center: center
+      horizontal_right: right
+      horizontal_rightest: rightest
+    width: 1/4

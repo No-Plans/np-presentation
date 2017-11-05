@@ -1,0 +1,25 @@
+Title: Off-white
+
+----
+
+Time: 
+
+----
+
+Description: 
+
+----
+
+Side: left
+
+----
+
+Size: medium
+
+----
+
+Vertical-position: vertical_center
+
+----
+
+Horizontal-position: horizontal_center
