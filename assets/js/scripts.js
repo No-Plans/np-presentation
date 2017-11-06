@@ -42,6 +42,9 @@ $(document).keydown(function(e) {
 
 function showImages(e){
   var images = $('.internet img');
+  var randomNum = Math.floor((Math.random()*3)+1);
+  $('#internet').attr('src', 'assets/content/internet/internet' + randomNum + '.jpg');
+  
   images.show();
 };
 
@@ -56,6 +59,7 @@ $(document).ready(function(){
 
   trigger.mouseenter(showImages);
   trigger.mouseleave(hideImages);
+
 
   // $(showImages);
 
