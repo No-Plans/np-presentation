@@ -76,11 +76,14 @@ a {
   transition: all 150ms ease-out 0s;
 }
 
-a:hover {
+a.site-link:hover {
     color: black;
-    border: 1px solid #D4ABBB;
-    background: #D4ABBB;
-  /*  text-shadow: 0 0 5px rgba(243,181,181,0.6); */
+    border: 1px solid #f5aaaa; /*pink*/
+    background: #f5aaaa;
+}
+
+a:hover {
+  color: #f5aaaa;
 }
 
 header {
@@ -271,22 +274,41 @@ nav {
   background: rgba(255, 255, 255, 0.92);
   padding: 0;
   z-index: 10;
-  line-height: 1.5rem;
-  /*border-bottom: 1px solid rgba(0,0,0,0.1);*/
+  /*line-height: 1.5rem;*/
+  /*border-bottom: 1px solid red;*/
+  height: 2rem;
 }
 
 nav ul li:first-child {
-  padding-left: 0;
+  padding: 0.4rem 0.7rem 0.25rem 0rem;
 }
 
-nav ul li{
+nav ul li {
   margin-top: 0;
+  list-style: none;
+  margin-right:0;
   border-left: 1px solid rgba(0,0,0,0.1);
-  padding: 0.4rem 0 0.2rem 0.4rem;
+}
+
+nav:hover ul li {
+  border-left: 1px solid rgba(0,0,0,1);
+}
+
+nav ul li:last-child {
+  border: none;
+  padding-right: 0.7rem;
+}
+
+nav ul li a {
+  margin-top: 0;
+  padding: 0.35rem 0.7rem 0.25rem 0.7rem;
+  height: 2rem;
+  display: block;
 }
 
 nav ul li:first-child {
   border: 0;
+  margin-left: 10%;
 }
 
 .header-menu * {
@@ -306,17 +328,13 @@ nav ul li:first-child {
 }
 
 .arrows {
-/*  position: absolute;
-  top: 90%;
-  right: 25px;*/
   float: right;
-  opacity: 0.4;
-  border-left: 1px solid #b3b3b3;
+  color: rgba(0,0,0,0.1);
   padding: 0.4rem 0 0.2rem 0.4rem;
 }
 
-.arrows span {
-  font-size: 0.3rem;
+.arrows .triangle {
+  font-size: 0.35rem;
 }
 
 .arrows-text {
@@ -325,19 +343,31 @@ nav ul li:first-child {
   margin-right: 3px;
 }
 
+.arrows-text .hide {
+  display: none;
+}
+
 .arrows button {
+  color: rgba(0,0,0,0.1);
   background: none;
   padding: 0.4em 0.8em;
   border-radius: 4px;
-  border: 1px solid #333;
+  border: 1px solid rgba(0,0,0,0.1);
   display: inline-block;
+  vertical-align: top;
   margin: 3px;
-  transform: translateY(-10%);
 }
 
-/*.about h1 {
-  margin-left: -5px;
-}*/
+nav:hover .arrows,
+nav:hover .arrows button {
+  border-color: rgba(0,0,0,1);
+  color: black;
+}
+
+nav:hover .arrows-text .hide {
+  display: inline;
+}
+
 
 .about h3 {
   margin-top: -21px;
@@ -365,11 +395,11 @@ nav ul li:first-child {
 
 .section {
   min-height: 100vh;
-  padding: calc(2em + 1px) 0 0 0;
+  padding: 2rem 0 0 0;
 }
 
 #top {
-  padding: calc(4em + 1px) 0 0 0;
+  padding: 2rem 0 0 0;
 }
 
 .section hr {
@@ -560,6 +590,22 @@ td {
   margin-left: auto;
   margin-right: auto;
 }
+
+.internet {
+  z-index: 5;
+}
+
+.internet img {
+  position: fixed;
+  display: none;
+  top: 0; left: 0; right: 0; bottom: 0; 
+  z-index: 5;
+}
+
+
+
+
+
 
 /* Medium (like ipad portrait) */
 
