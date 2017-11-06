@@ -37,6 +37,27 @@ $(document).keydown(function(e) {
      default: return; 
   }
   e.preventDefault();
-});    
+});
 
+
+function showImages(e){
+  var images = $('.internet img');
+  images.show();
+};
+
+function hideImages(e){
+  var images = $('.internet img');
+  images.hide();
+};
+
+
+$(document).ready(function(){
+  var trigger = $('.header-menu');
+
+  trigger.mouseenter(showImages);
+  trigger.mouseleave(hideImages);
+
+  // $(showImages);
+
+});
 
