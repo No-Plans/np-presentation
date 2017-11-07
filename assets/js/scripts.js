@@ -1,3 +1,11 @@
+//loader 
+//  $(function(){
+//      var x = 0;
+//      setInterval(function(){
+//          x-=1;
+//          $('.loader').css('background-position', x + 'px 0');
+//      }, 5);
+//  })
 
 $(window).on("load",function(){
   $('.loader').fadeOut(400);
@@ -33,31 +41,26 @@ $(document).keydown(function(e) {
 
 
 function showImages(e){
-  var images = $('.internet img');
-  var randomNum = Math.floor((Math.random()*3)+1);
+  var images = $('.internet');
+  var randomNum = Math.floor((Math.random()*4)+1);
   $('#internet').attr('src', 'assets/content/internet/internet' + randomNum + '.jpg');
   
   images.show();
 };
 
 function hideImages(e){
-  var images = $('.internet img');
+  var images = $('.internet');
   images.hide();
 };
 
 
 $(document).ready(function(){
-  var trigger = $('.header-menu, .header-menu li');
+  var trigger = $('.header-menu');
 
   trigger.mouseenter(showImages);
   trigger.mouseleave(hideImages);
-<<<<<<< HEAD
   trigger.click(hideImages);
-=======
 
-
-  // $(showImages);
->>>>>>> f2ff7b2a8e3e1b079d4aae712068159727c30fdb
 
 });
 

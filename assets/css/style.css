@@ -1,10 +1,22 @@
 /* Typography */
 
 @font-face {
-  font-family: 'Zirkon';
-  src: 
-  url('../fonts/121101_zirkon_regular_2.otf'),
-  url('../fonts/121101_zirkon_regular_2.otf') format('embedded-opentype');
+  font-family: 'ZirkonLight';
+  src:
+  url('../fonts/gt-zirkon-light-v1-webfont.ttf'),
+  url('../fonts/gt-zirkon-light-v1-webfont.woff') format('woff'),
+  url('../fonts/gt-zirkon-light-v1-webfont.woff2') format('woff2');
+
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'ZirkonBook';
+  src:
+  url('../fonts/gt-zirkon-book-v1-webfont.ttf'),
+  url('../fonts/gt-zirkon-book-v1-webfont.woff') format('woff'),
+  url('../fonts/gt-zirkon-book-v1-webfont.woff2') format('woff2');
+
   font-weight: 400;
 }
 
@@ -37,18 +49,30 @@ html, body {
 }
 
 h1 {
-  font-family: 'Zirkon', Arial;
+  font-family: 'ZirkonLight', Arial;
   font-size: 4rem;
   line-height: 1.1em;
   letter-spacing: -2px;
   margin-left: 12.5%;
 }
 
-h2 {
+.big-text, h2 {
   font-size: 1.9rem;
   line-height: 1.15em;
   margin-top: 0em;
   text-indent: 12.5%;
+}
+
+h2.subtitle {
+  margin-top: 1em;
+}
+
+.description {
+  margin-top: 0.2em;
+}
+
+.description.small {
+  font-size: 1rem;
 }
 
 h3 {
@@ -90,20 +114,6 @@ header {
   font-size: 0.8rem;
 }
 
-.description {
-  font-size: 2rem;
-  line-height: 1.3em;
-  margin-top: 0.2em;
-}
-
-.description.small {
-  font-size: 1rem;
-}
-
-/* .description a,
-  a.site-link {
-  border-bottom: 0px solid #000;
-} */
 
 .site-link:hover,
 a.site-link:hover {
@@ -185,7 +195,7 @@ button:hover, button:focus,
 
 
 .loading {
-  font-family: 'Zirkon', Arial;
+  font-family: 'ZirkonBook', Arial;
   color: #000;
   position: fixed;
   left: auto;
@@ -258,6 +268,11 @@ button:hover, button:focus,
     }
 }
 
+
+
+/* Navigation ---------------------------*/
+
+
 .logo img{
   display: block;
   position: fixed;
@@ -274,13 +289,15 @@ nav {
   background: rgba(255, 255, 255, 0.92);
   padding: 0;
   z-index: 10;
-  /*line-height: 1.5rem;*/
-  /*border-bottom: 1px solid red;*/
   height: 2rem;
 }
 
+nav:hover {
+  background: white;
+}
+
 nav ul li:first-child {
-  padding: 0.4rem 0.7rem 0.25rem 0rem;
+  padding: 0.4rem 0.7rem 0.25rem 0.7rem;
 }
 
 nav ul li {
@@ -300,21 +317,20 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-  border: 0;
   margin-top: 0;
-  padding: 0.4rem 0.7rem 0.2rem 0.7rem;
+  padding: 0.35rem 0.7rem 0.25rem 0.7rem;
   height: 2rem;
   display: block;
 }
 
 nav ul li:first-child {
   border: 0;
-  margin-left: 0.7rem;
+  /*margin-left: 10%;*/
 }
 
 .header-menu * {
   text-transform: uppercase;
-  font-family: 'Zirkon', Arial;
+  font-family: 'ZirkonBook', Arial;
   font-size: 0.65rem;
 }
 
@@ -370,6 +386,18 @@ nav:hover .arrows-text .hide {
 }
 
 
+
+
+/* Sections ---------------------------*/
+
+
+.big-logo {
+  display: inline;
+  height: 1.52rem;
+  width: auto;
+}
+
+
 .about h3 {
   margin-top: -21px;
   margin-left: 5px;
@@ -397,6 +425,8 @@ nav:hover .arrows-text .hide {
 .section {
   min-height: 100vh;
   padding: 2rem 0 0 0;
+/*  z-index: 2;
+  position: relative;*/
 }
 
 #top {
@@ -497,7 +527,7 @@ tr {
 td {
   display:list-item;
   list-style-position: inside;
-  font-family: 'Zirkon', Arial;
+  font-family: 'ZirkonBook', Arial;
   font-size: 0.65rem;
   line-height: 1.2em;
   text-transform: uppercase;
@@ -523,7 +553,7 @@ td {
 }
 
 .caption-column * {
-    font-family: 'Zirkon', Arial;
+    font-family: 'ZirkonBook', Arial;
     text-transform: uppercase;
     font-size: 0.55rem;
     line-height: 1.5em;
@@ -593,14 +623,16 @@ td {
 }
 
 .internet {
-  z-index: 5;
-}
-
-.internet img {
   position: fixed;
   display: none;
   top: 0; left: 0; right: 0; bottom: 0; 
-  z-index: 5;
+  z-index: 1;
+}
+
+.internet img {
+  object-fit: cover;
+  -o-object-fit: cover;
+  height: 100%;
 }
 
 
