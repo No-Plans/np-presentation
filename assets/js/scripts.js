@@ -52,12 +52,11 @@ function hideImages(e){
 
 
 $(document).ready(function(){
-  var trigger = $('.header-menu');
+  var trigger = $('.header-menu, .header-menu li');
 
   trigger.mouseenter(showImages);
   trigger.mouseleave(hideImages);
-
-  // $(showImages);
+  trigger.click(hideImages);
 
 });
 
