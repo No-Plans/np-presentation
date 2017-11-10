@@ -13,7 +13,7 @@ $(window).on("load",function(){
 
 // looks what's on viewport
 $(window).scroll(function() {
-    var top_point = $(window).scrollTop();
+  var top_point = $(window).scrollTop();
   if ($(window).width() > 1023) {
     $('.section').each(function() {
     var top_outer = $(this).offset().top;
@@ -40,17 +40,49 @@ $(document).keydown(function(e) {
 });
 
 
+// play video in viewport
+$(document).ready(function() {
+    // Get media - with autoplay disabled (audio or video)
+    // var media = $('video').not("[autoplay='autoplay']");
+    var media = $('video');
+    var tolerancePixel = 40;
+
+    function checkMedia(){
+        // Get current browser top and bottom
+        var scrollTop = $(window).scrollTop() + tolerancePixel;
+        var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
+
+        media.each(function(index, el) {
+            var yTopMedia = $(this).offset().top;
+            var yBottomMedia = $(this).height() + yTopMedia;
+
+            if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){ 
+                $(this).get(0).play();
+            } else {
+                $(this).get(0).pause();
+            }
+        });
+
+        //}
+    }
+    $(document).on('scroll', checkMedia);
+});
+
+
+
 function showImages(e){
   var images = $('.internet');
-  var randomNum = Math.floor((Math.random()*4)+1);
+  var randomNum = Math.floor((Math.random()*3)+1);
   $('#internet').attr('src', 'assets/content/internet/internet' + randomNum + '.jpg');
   
-  images.show();
+  // images.show();
+  images.addClass('show');
 };
 
 function hideImages(e){
   var images = $('.internet');
-  images.hide();
+  // images.hide();
+  images.removeClass('show');
 };
 
 

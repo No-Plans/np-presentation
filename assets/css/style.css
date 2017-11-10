@@ -397,6 +397,11 @@ nav:hover .arrows-text .hide {
   width: auto;
 }
 
+.about {
+  background: #f5aaaa url(../content/bk.jpg) center center;
+  background-size: 100%;
+  background-attachment: fixed;
+}
 
 .about h3 {
   margin-top: -21px;
@@ -624,9 +629,14 @@ td {
 
 .internet {
   position: fixed;
-  display: none;
-  top: 0; left: 0; right: 0; bottom: 0; 
+  /*display: none;*/
+  top: 0; left: 120vw; right: auto; bottom: 0; 
   z-index: 1;
+}
+
+.internet.show {
+  left: 0;
+  right: 0;
 }
 
 .internet img {
@@ -634,6 +644,8 @@ td {
   -o-object-fit: cover;
   height: 100%;
 }
+
+
 
 
 
