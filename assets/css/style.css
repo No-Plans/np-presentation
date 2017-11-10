@@ -194,8 +194,8 @@ button:hover, button:focus,
 .loading {
   font-family: 'ZirkonBook', Arial;
   color: #000;
-  position: fixed;
-  left: auto;
+  /*position: fixed;*/
+  /*left: auto;*/
   z-index: 9999;
   font-size: 0.65rem;
   line-height: 1.5rem;
@@ -207,63 +207,23 @@ button:hover, button:focus,
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   z-index: 9999;
-  /*background-image: url('../img/lines.svg');*/
-  background-size: cover;
-  background-repeat: repeat-x;
   background-color: #fff;
-  fill: #ace63c; 
-  -webkit-animation-name: MOVE-BG;
-  -webkit-animation-duration: 80s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-name: MOVE-BG;
-  animation-duration: 80s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  @-moz-animation-name: MOVE-BG;
-  @-moz-animation-duration: 80s;
-  @-moz-animation-timing-function: linear;
-  @-moz-animation-iteration-count: infinite;
+  padding: 0 0.7rem;
 }
 
-@-webkit-keyframes MOVE-BG {
-    from {
-        background-position: 0% 0%
-    }
-    to { 
-        background-position: -1000px 0%
-    }
+.loader .arrows {
+  padding-top:0;
+  color: rgba(0,0,0,1);
 }
 
-@keyframes MOVE-BG {
-    from {
-        background-position: 0% 0%
-    }
-    to { 
-        background-position:  -1000px 0% 
-    }
+.loader .arrows button {
+  color: rgba(0,0,0,1);
+  border: 1px solid rgba(0,0,0,1);
 }
 
-@-moz-keyframes MOVE-BG {
-    from {
-        background-position: 0% 0%
-    }
-    to { 
-        background-position: 187% 0%
-    }
-}
-
-@-o-keyframes MOVE-BG {
-    from {
-        background-position: 0% 0%
-    }
-    to { 
-        background-position: 187% 0%
-    }
-}
 
 
 
@@ -343,7 +303,7 @@ nav ul li:first-child {
 
 .arrows {
   float: right;
-  color: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.2);
   padding: 0.4rem 0 0.2rem 0.4rem;
 }
 
@@ -362,14 +322,14 @@ nav ul li:first-child {
 }
 
 .arrows button {
-  color: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,0.2);
   background: none;
-  padding: 0.4em 0.8em;
+  padding: 0.3rem 0.5rem;
   border-radius: 4px;
   border: 1px solid rgba(0,0,0,0.1);
   display: inline-block;
   vertical-align: top;
-  margin: 3px;
+  margin: 1px 3px;
 }
 
 nav:hover .arrows,
@@ -439,6 +399,7 @@ nav:hover .arrows-text .hide {
   display: block;
   overflow: hidden;
 }
+
 
 #top {
   padding: 2rem 0 0 0;
