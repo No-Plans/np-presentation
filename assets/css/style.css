@@ -68,7 +68,7 @@ h2.subtitle {
 }
 
 .description {
-  margin-top: 0.2em;
+  margin-top: 1em;
 }
 
 .description.small {
@@ -80,9 +80,7 @@ h3 {
 }
 
 li {
-  font-size: 2rem;
   list-style: disc;
-  margin-right: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -122,7 +120,6 @@ a.site-link:hover {
 
 .site-link {
   display: inline-block;
-  /*cursor: pointer;*/
   background: none;
   padding: 1rem 1rem 0.4rem 1.25rem;
   border-radius: 4px;
@@ -403,6 +400,14 @@ nav:hover .arrows-text .hide {
   background-attachment: fixed;
 }
 
+.section.thanks {
+  background: #f5aaaa url(../content/bk.jpg) center center;
+  background-size: 100%;
+  background-attachment: fixed;
+  padding: 0;
+  border-top: 2rem solid white;
+}
+
 .about h3 {
   margin-top: -21px;
   margin-left: 5px;
@@ -430,8 +435,9 @@ nav:hover .arrows-text .hide {
 .section {
   min-height: 100vh;
   padding: 2rem 0 0 0;
-/*  z-index: 2;
-  position: relative;*/
+  height: auto;
+  display: block;
+  overflow: hidden;
 }
 
 #top {
@@ -446,6 +452,10 @@ nav:hover .arrows-text .hide {
   display: block;
   margin-bottom: 2em;
   margin-top:0;
+}
+
+.section hr.white {
+  border-color: transparent;
 }
 
 .section.title,
@@ -511,7 +521,6 @@ table.L-1-2, table.L-1-3 {
 th, tr, td {
   width: 100%;
   text-align: left;
-  padding: 0.2em 0.4em;
   float: left;
   font-weight: normal;
 }
@@ -526,17 +535,14 @@ th, tr, td {
 }
 
 tr {
-  border-left: 0px solid rgba(0,0,0,0.1);
+  padding: 0.5rem 0;  
 }
 
 td {
-  display:list-item;
-  list-style-position: inside;
+  padding: 0.5rem 1rem;
   font-family: 'ZirkonBook', Arial;
   font-size: 0.65rem;
   line-height: 1.2em;
-  text-transform: uppercase;
-  list-style-type: disc;
 }
 
 .table-cell {
@@ -544,12 +550,31 @@ td {
   vertical-align: top;
 }
 
-.video-column  {
+table ul {
+  margin-left: 1.9rem;
+}
+
+table li {
+  margin-top: 0.25rem;
+}
+
+span.time {
+  float: right;
+  font-family: 'ZirkonBook', Arial;
+  font-size: 0.65rem;
+}
+
+
+.video-column, .image-column  {
   display: table-cell;
   vertical-align: top;
   width: calc(100vw - 400px);
   max-width: 1200px;
   padding-top: 2em;
+}
+
+.image-column img {
+  margin-bottom: 2rem;
 }
 
 .caption-column {
@@ -570,7 +595,7 @@ td {
   list-style: none;
 }
 
-.embed-container { 
+/*.embed-container { 
   position: relative; 
   padding-bottom: 56.4%; 
   height: 0; 
@@ -610,6 +635,18 @@ td {
   left: 0%; 
   width: 100.9%;  
   height: 100.1%; 
+}*/
+
+
+.embed-container { 
+  position: relative; 
+  height: auto; 
+  overflow: hidden; 
+  max-width: 100%;
+}
+
+.embed-container object {
+  height: auto;
 }
 
 .brand-assets {
