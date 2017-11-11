@@ -72,17 +72,17 @@ $(document).ready(function() {
 
 function showImages(e){
   var images = $('.internet');
-  var randomNum = Math.floor((Math.random()*3)+1);
-  $('#internet').attr('src', 'assets/content/internet/internet' + randomNum + '.jpg');
+  var randomNum = Math.floor((Math.random()*1)+1);
+  $('#internet').attr('src', 'assets/content/fashion/fashion' + randomNum + '.jpg');
   
-  // images.show();
-  images.addClass('show');
+  images.show();
+  // images.addClass('show');
 };
 
 function hideImages(e){
   var images = $('.internet');
-  // images.hide();
-  images.removeClass('show');
+  images.hide();
+  // images.removeClass('show');
 };
 
 

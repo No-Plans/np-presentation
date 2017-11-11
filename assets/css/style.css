@@ -627,8 +627,8 @@ span.time {
 
 .internet {
   position: fixed;
-  /*display: none;*/
-  top: 0; left: 120vw; right: auto; bottom: 0; 
+  display: none;
+  top: 0; left: 0; right: 0; bottom: 0; 
   z-index: 1;
 }
 
