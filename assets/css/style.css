@@ -212,17 +212,20 @@ button:hover, button:focus,
   z-index: 9999;
   background-color: #fff;
   padding: 0 0.7rem;
+  cursor: wait;
 }
 
-.loader .arrows {
+.loading .arrows {
   padding-top:0;
   color: rgba(0,0,0,1);
 }
 
-.loader .arrows button {
+.loading .arrows button {
   color: rgba(0,0,0,1);
   border: 1px solid rgba(0,0,0,1);
 }
+
+
 
 
 
@@ -262,6 +265,7 @@ nav ul li {
   list-style: none;
   margin-right:0;
   border-left: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
 nav:hover ul li {
