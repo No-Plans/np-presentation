@@ -72,8 +72,8 @@ $(document).ready(function() {
 
 function showImages(e){
   var images = $('.internet');
-  var randomNum = Math.floor((Math.random()*1)+1);
-  $('#internet').attr('src', 'assets/content/fashion/fashion' + randomNum + '.jpg');
+//  var randomNum = Math.floor((Math.random()*1)+1);
+//  $('#internet').attr('src', 'assets/content/fashion/fashion' + randomNum + '.jpg');
   
   images.show();
   // images.addClass('show');
